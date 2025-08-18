@@ -15,8 +15,9 @@
         .about-content {
             display: flex;
             gap: 40px;
+            font-size: 1.1rem;
             align-items: center;
-            margin-bottom: 50px;
+            margin-bottom: 0px;
         }
 
         .about-text {
@@ -56,17 +57,24 @@
         }
 
         .member-photo {
-            height: 300px;
+            height: 10px;
             background-size: cover;
             background-position: center;
         }
 
         .member-info {
-            padding: 20px;
+            padding: 10px;
             text-align: center;
+
+             font-family: "Inter", sans-serif;   /* шрифт */
+              font-size: 1.3rem;                /* 18 px; лучше в rem для адаптивности */
+              font-weight: 600;                   /* полужирный */
+              line-height: 1.4;                   /* межстрочный интервал */
+              letter-spacing: 0.02em;             /* «воздух» между буквами */
+              color: #222;                        /* цвет текста */
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 700px) {
             .about-content {
                 flex-direction: column;
             }
@@ -113,36 +121,54 @@
                         <li><i class="fas fa-check" style="color: var(--accent);"></i> Собственный транспорт для вывоза</li>
                     </ul>
                 </div>
-
-                <div class="about-image">
-                    <img src="assets/images/about.jpg" alt="Наш пункт приёма вторсырья">
-                </div>
             </div>
 
-            <h2 style="text-align: center;">Наш</h2>
-            <div class="team-gallery">
-                <div class="team-member">
-                    <div class="member-photo" style="background-image: url('assets/images/team1.jpg');"></div>
-                    <div class="member-info">
-                        <h3>Кирилл</h3>
-                        <p>Основатель компании</p>
+<!--                <div class="about-image">-->
+<!--                    <img src="assets/images/about.jpg" alt="Наш пункт приёма вторсырья">-->
+<!--                </div>-->
+
+            <h2 style="text-align: center;">Этапы работы</h2>
+            <div class="member-info">
+                <div class="stage-work">
+                    <div class="member-photo"></div>
+                        <img src="assets/images/step1.jpg">
+                        <p>Закупка пленки, картона и бумаги. Определение массы сырья.</p>
                     </div>
                 </div>
 
-                <div class="team-member">
-                    <div class="member-photo" style="background-image: url('assets/images/team2.jpg');"></div>
-                    <div class="member-info">
-                        <h3>Анна</h3>
-                        <p>Менеджер по приёмке</p>
-                    </div>
+                <div class="member-info">
+                  <div class="stage-work">
+                      <div class="member-photo"></div>
+                          <img src="assets/images/step2.jpg">
+                          <p>Сортировка выполняется вручную, отделяю полиэтилен по видам (ПВД, ПНД, Стрейч, цветная и.т.д Картон и пленку также очищаю от скотча или других элементов, если они имеются.</p>
+                      </div>
+                  </div>
                 </div>
 
-                <div class="team-member">
-                    <div class="member-photo" style="background-image: url('assets/images/team3.jpg');"></div>
-                    <div class="member-info">
-                        <h3>Дмитрий</h3>
-                        <p>Специалист по сортировке</p>
-                    </div>
+                <div class="member-info">
+                  <div class="stage-work">
+                      <div class="member-photo"></div>
+                          <img src="assets/images/step3.jpg">
+                          <p>Далее отходы не подлежащие переработке, отправляются в пресс, пакетируются и утилизируются.</p>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="member-info">
+                  <div class="stage-work">
+                      <div class="member-photo"></div>
+                          <img src="assets/images/step4.jpg">
+                          <p>Полиэтилен направляется в промышленный агрегат, такой как-дробилка, где происходит измельчения до однородной фракции.</p>
+                      </div>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <div class="stage-work">
+                      <div class="member-photo"></div>
+                          <img src="assets/images/step6.jpg">
+                          <p>Полученное вторсырьё получает " Новую жизнь " и отправляется на реализацию для повторного изготовления продукции.</p>
+                      </div>
+                  </div>
                 </div>
             </div>
         </div>
