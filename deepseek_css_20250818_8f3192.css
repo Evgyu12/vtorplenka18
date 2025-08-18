@@ -1,0 +1,321 @@
+/* Базовые стили */
+:root {
+    --primary: #333;
+    --accent: #ff6600;
+    --light: #f5f5f5;
+    --gray: #777;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: var(--primary);
+    line-height: 1.6;
+    background-color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Добавьте этот параметр */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0; /* Убираем старые отступы */
+}
+
+nav ul li a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+    padding: 5px 0;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a.active {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.logo h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.logo h1 span {
+    color: var(--accent);
+}
+
+.logo p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.locations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+
+.locations p {
+    position: relative;
+    padding-right: 15px;
+}
+
+.locations p:not(:last-child)::after {
+    content: "•";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--gray);
+}
+
+.contact-phone a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-phone a:hover {
+    color: var(--accent);
+}
+
+/* Контакты - выравнивание формы */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Главный баннер */
+.main-banner {
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--light);
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.main-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.main-banner p {
+    font-size: 1.2rem;
+    color: var(--gray);
+}
+
+/* Услуги */
+.services {
+    padding: 60px 0;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.services h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-color: var(--accent);
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+
+.service-card p {
+    color: var(--gray);
+}
+
+/* Галерея */
+.portfolio {
+    padding: 40px 0 60px;
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    font-style: italic;
+}
+
+/* Футер */
+footer {
+    background-color: var(--primary);
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-contact {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .locations {
+        justify-content: center;
+    }
+    
+    .main-banner h2 {
+        font-size: 2rem;
+    }
+    
+    .main-banner p {
+        font-size: 1rem;
+    }
+}
+
+.map {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 480px) {
+    .locations p {
+        padding-right: 10px;
+        font-size: 0.8rem;
+    }
+    
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании - VtorPlenka18</title>
+    <link rel="stylesheet" href="assets/css/deepseek_css_20250818_8f3192.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Дополнительные стили для страницы "О нас" */
+        .about-page {
+            padding: 60px 0;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .team-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-photo {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .member-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка (как на главной) -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                    <h1>Vtor<span>Plenka18</span></h1>
+                    <p>Приём вторсырья</p>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="index.html#services" class="active">Услуги</a></li>
+                    <li><a href="onas.html" class="active">О нас</a></li>
+                    <li><a href="index.html#contact" class="active">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="phone">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент страницы -->
+    <main class="about-page">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>О нашей компании</h2>
+                    <p>Мы — пункт приёма вторсырья, работающий с 2018 года. За это время мы отправили на переработку более 500 тонн отходов, внеся значительный вклад в защиту окружающей среды.</p>
+                    <p>Наша миссия — создать удобные условия для сдачи вторсырья как для частных лиц, так и для организаций, обеспечивая профессиональный подход на всех этапах работы.</p>
+                    <ul style="margin-top: 20px; list-style: none;">
+                        <li><i class="fas fa-check" style="color: var(--accent);"></i> Современное оборудование для сортировки</li>
+                        <li><i class="fas fa-check" style="color: var(--accent);"></i> Честное взвешивание с видеонаблюдением</li>
+                        <li><i class="fas fa-check" style="color: var(--accent);"></i> Документы для отчётности</li>
+                        <li><i class="fas fa-check" style="color: var(--accent);"></i> Собственный транспорт для вывоза</li>
+                    </ul>
+                </div>
+
+                <div class="about-image">
+                    <img src="assets/images/about.jpg" alt="Наш пункт приёма вторсырья">
+                </div>
+            </div>
+
+            <h2 style="text-align: center;">Наш</h2>
+            <div class="team-gallery">
+                <div class="team-member">
+                    <div class="member-photo" style="background-image: url('assets/images/team1.jpg');"></div>
+                    <div class="member-info">
+                        <h3>Кирилл</h3>
+                        <p>Основатель компании</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo" style="background-image: url('assets/images/team2.jpg');"></div>
+                    <div class="member-info">
+                        <h3>Анна</h3>
+                        <p>Менеджер по приёмке</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo" style="background-image: url('assets/images/team3.jpg');"></div>
+                    <div class="member-info">
+                        <h3>Дмитрий</h3>
+                        <p>Специалист по сортировке</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер (как на главной) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Vtor<span>Plenka18</span></h3>
+                    <p>Приём полиэтилена и макулатуры</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Главная</a>
+                    <a href="#services">Услуги</a>
+                    <a href="onas.html">О нас</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 VtorPlenka18. Все права защищены</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
