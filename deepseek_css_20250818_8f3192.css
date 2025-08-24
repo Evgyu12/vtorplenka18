@@ -319,3 +319,35 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+body.index-page {
+    background-image: url('../images/planet.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 100vh;
+}
+
+body.index-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: -1;
+}
+
+body.index-page .container {
+    position: relative;
+    z-index: 1;
+}
+
+body.index-page .service-card,
+body.index-page .main-banner {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+}
