@@ -320,6 +320,7 @@ footer {
     }
 }
 
+/* Фон для главной страницы */
 body.index-page {
     background-image: url('../images/planet.jpg');
     background-size: cover;
